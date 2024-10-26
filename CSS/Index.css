@@ -1,0 +1,439 @@
+/* *start of General Styling */
+:root {
+    --primaryColor: rgb(253, 204, 15);
+    --darkPrimary: rgb(244, 175, 0);
+    --shadow: rgba(253, 170, 15, 0.3);
+    --black: #000;
+    --white: #fff;
+    --gray: #ffffffcc;
+    --trans: transparent;
+
+}
+.light {
+    --black: #e5e3e3;
+    --white: #000;
+    --gray: #494747cc;
+    --trans: #000;
+}
+
+.form-control {
+    background: var(--white);
+    color: var(--black);
+}
+
+
+.mainTitle {
+    color: var(--darkPrimary);
+    font-family: cursive;
+}
+
+main {
+    margin: 50px 0 !important;
+}
+
+section {
+    margin-top: 50px !important;
+}
+
+@media screen and (min-width: 992px) {
+
+    section,
+    main {
+        margin: 20px 0 !important;
+    }
+}
+
+/* *end of General Styling */
+
+/* *start of loading screen */
+/* Styles for the loading screen */
+
+body {
+    color: var(--darkPrimary);
+    background: var(--black);
+    margin: 0;
+    overflow: hidden;
+    /* Prevent body overflow */
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.overLayer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    position: relative;
+    width: 160px;
+    height: 60px;
+}
+
+.circles {
+    position: absolute;
+    height: 60px;
+    width: 180px;
+}
+
+.circles span {
+    position: absolute;
+    top: 25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: #EFEFEF;
+}
+
+.circles span.one {
+    right: 80px;
+}
+
+.circles span.two {
+    right: 40px;
+}
+
+.circles span.three {
+    right: 0px;
+}
+
+.circles {
+    animation: animcircles 0.5s infinite linear;
+}
+
+@keyframes animcircles {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-40px, 0px);
+    }
+}
+
+.pacman {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+}
+
+.pacman .eye {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: #1C163A;
+}
+
+.pacman span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+}
+
+.pacman span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 60px;
+    background-color: #FFFB16;
+}
+
+.pacman .top::before {
+    top: 0;
+    border-radius: 60px 60px 0px 0px;
+}
+
+.pacman .bottom::before {
+    bottom: 0;
+    border-radius: 0px 0px 60px 60px;
+}
+
+.pacman .left::before {
+    bottom: 0;
+    height: 60px;
+    width: 30px;
+    border-radius: 60px 0px 0px 60px;
+}
+
+.pacman .top {
+    animation: animtop 0.5s infinite;
+}
+
+@keyframes animtop {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+.pacman .bottom {
+    animation: animbottom 0.5s infinite;
+}
+
+@keyframes animbottom {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+
+/* *end of loading screen */
+/* *start of header & navbar */
+.nav-item,
+.socialIcons i,
+.meal,
+.mealCateg,
+.mealArea,
+.mealIngredient {
+    cursor: pointer;
+}
+
+.navIcons {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-right: 2px solid var(--shadow);
+}
+
+header {
+    z-index: 999 !important;
+    left: -250px;
+}
+.socialIcons i {
+    -webkit-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
+}
+.socialIcons i:hover {
+    color: var(--darkPrimary);
+}
+.navMenu {
+    max-width: 250px;
+    background: var(--trans);
+}
+.navIcons,
+.mobileBtn {
+    width: 60px !important;
+}
+.nav-link {
+    font-size: 17px;
+    -webkit-transition: color 300ms;
+    -o-transition: color 300ms;
+    transition: color 300ms;
+}
+.nav-item:hover .nav-link {
+    color: var(--primaryColor) !important;
+}
+.nav-item {
+    top: 280px;
+}
+.nav-item::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--primaryColor);
+    -webkit-transition: width 500ms;
+    -o-transition: width 500ms;
+    transition: width 500ms;
+    position: absolute;
+    bottom: 1px;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.menuBtn {
+    -webkit-transition: color 300ms;
+    -o-transition: color 300ms;
+    transition: color 300ms;
+}
+
+.menuBtn:hover {
+    color: var(--darkPrimary) !important;
+}
+
+
+/* *end of header & navbar */
+
+/* Cover Section Styling */
+.cover {
+    position: relative;
+    height: 50vh; 
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+#backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 10rem; /* Adjust size as needed */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Dancing Script", cursive;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: large;
+}
+
+/* Main Section Padding */
+#mealsMain {
+    padding-top: 3rem;
+}
+
+/* *start of main section */
+/* *1. start of all meals section */
+.mealOverlay {
+    background-color: var(--gray);
+    height: 100%;
+    -webkit-transition: top 600ms;
+    -o-transition: top 600ms;
+    transition: top 600ms ease;
+}
+.meal {
+    transition: .5s ease;
+}
+.meal:hover {
+    box-shadow: 1px 1px 25px #db8204;
+}
+.meal:hover .mealOverlay {
+    top: 0 !important;
+    height: 100%;
+}
+.meal h3 {
+    color: var(--black);
+}
+.mealCateg .mealOverlay {
+    top: 200%;
+}
+.mealCateg:hover .mealOverlay {
+    top: 0%;
+}
+.fa-house-laptop,
+.fa-drumstick-bite {
+    font-size: 4rem;
+}
+/* *end of all meals section */
+
+/* *2. start of forms sections */
+.form-control:focus {
+    -webkit-box-shadow: 0 0 0 0.25rem var(--shadow) !important;
+    box-shadow: 0 0 0 0.25rem var(--shadow) !important;
+    border-color: var(--primaryColor) !important;
+}
+.form-control::-webkit-input-placeholder {
+    color: grey !important;
+}
+.form-control::-moz-placeholder {
+    color: grey !important;
+}
+.form-control:-ms-input-placeholder {
+    color: grey !important;
+}
+
+.form-control::-ms-input-placeholder {
+    color: grey !important;
+}
+
+.form-control::placeholder {
+    color: grey !important;
+}
+
+.btn {
+    -webkit-transition: color 300ms, background-color 500ms !important;
+    -o-transition: color 300ms, background-color 500ms !important;
+    transition: color 300ms, background-color 500ms !important;
+}
+
+.formInput p {
+    min-height: 50px;
+}
+
+/* &hide arrows from number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.searchSec {
+    z-index: 800;
+}
+
+/* *end of forms sections */
+/* *start of meal details section */
+.mealInst ol {
+    list-style-position: inside;
+}
+
+.recipe p,
+.tag p {
+    font-size: 0.95rem;
+}
+
+.recipe {
+    min-height: 40px;
+}
+
+/* *end of meal details section */
+/* *end of main section */

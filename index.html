@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/375cfc3d13.js" crossorigin="anonymous"></script>
+    <title>Yummy</title>
+</head>
+
+<body>
+
+    <body>
+        <!-- start of loading screen -->
+        <div class="loading">
+            <div class="overLayer">
+                <div class="loader">
+                    <div class="circles">
+                        <span class="one"></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                    </div>
+                    <div class="pacman">
+                        <span class="top"></span>
+                        <span class="bottom"></span>
+                        <span class="left"></span>
+                        <div class="eye"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of loading screen -->
+        <div class="cover d-flex justify-content-center align-items-center flex-column">
+            <div id="backgroundImg" style="background-image: url(images/cover.png);"></div>
+            <div class="cover-content">
+                <img id="logo" src="images/logo.png" alt="logo">
+                <h1>Yummy</h1>
+                <p>
+                    Discover Deliciousness with
+                    <span class="main-color fw-semibold">Yummy</span> Recipes!
+                </p>
+            </div>
+        </div>
+        <!--  header & navbar -->
+        <header class="d-flex flex-column justify-content-between align-items-center position-fixed vh-100 top-0 ove">
+            <nav class="d-flex h-100 justify-content-between align-items-center">
+                <div class="sideIcons h-100">
+                    <div class="mobileBtn">
+                        <button
+                            class="border-0 bg-opacity-50 bg-light fs-3 text-black menuBtn d-block d-lg-none px-4 py-2 rounded-3 align-self-start m-4 text-center">
+                            <i class="fa-solid fa-bars menuIcon"></i>
+                        </button>
+                    </div>
+
+                    <div
+                        class="navIcons h-100 d-none d-lg-flex flex-lg-column justify-content-lg-between align-items-lg-center py-4 text-black shadow-lg">
+                        <a class="navbar-brand d-block text-center" href="index.html">
+                            <img src="images/logo.png" alt="Yummy Website Logo" class="w-100 px-2" />
+                        </a>
+                        <button class="border-0 bg-transparent fs-3 text-black p-2 menuBtn">
+                            <i class="fa-solid fa-bars menuIcon"></i>
+                        </button>
+                        <div class="socialIcons d-flex flex-column row-gap-1 fs-5">
+                            <i class="fa-solid fa-globe p-2">
+                                <a href="#"></a>
+                            </i>
+                            <i class="fa-solid fa-share-nodes p-2">
+                                <a href="#"></a>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div
+                    class="navMenu h-100 order-first d-flex flex-column justify-content-between align-items-center  text-light p-4">
+                    <ul class="navbar-nav me-auto mb-2 overflow-hidden">
+                        <h1 class="mainTitle">Yummy</h1>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#search" id>
+                                <i class="fa-solid fa-search"></i> Search</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#categories"><i class="fa-solid fa-layer-group"></i> Categories</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#area"><i class="fa-solid fa-earth-america"></i> Area</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#ingredients"><i class="fa-solid fa-burger"></i> Ingredients</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#contact"><i class="fa-solid fa-contact-card"></i> Contact Us</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link fw-semibold" href="#dark"><i class="fa-solid fa-circle-half-stroke"></i> Dark : Theme</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="nav-footer text-center">
+                        <div class="socialIcons d-flex gap-1 fs-5 mb-2 justify-content-center">
+                            <i class="fa-brands fa-facebook p-2">
+                                <a href="#"></a>
+                            </i>
+
+                            <i class="fa-brands fa-twitter p-2">
+                                <a href="#"></a>
+                            </i>
+
+                            <i class="fa-solid fa-globe p-2 p-2">
+                                <a href="#"></a>
+                            </i>
+                        </div>
+                        <p class="fw-medium">Copyright Â© 2024 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- search section -->
+        <section class="searchSec position-relative" id="search">
+            <div class="container searchForm "></div>
+        </section>
+
+        <!-- start of sign up form -->
+        <section class="signUpSec" id="signUp">
+            <div class="container">
+                <div class="signUpForm"></div>
+            </div>
+        </section>
+        <!-- end of sign up form -->
+
+        <!-- main section -->
+        <main id="mealsMain " class="text-light ">
+            <div class="container">
+                <section class="mealSec">
+                    <div class="row mealsContainer  g-4" id="rowData"></div>
+                </section>
+            </div>
+        </main>
+        <script src="JS/jquery-3.6.1.min.js"></script>
+        <script src="JS/bootstrap.bundle.min.js"></script>
+        <script src="JS/index.js"></script>
+    </body>
+
+</html>
