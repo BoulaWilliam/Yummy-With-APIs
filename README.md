@@ -86,15 +86,6 @@ This project uses [TheMealDB API](https://www.themealdb.com/api.php) for all mea
 
 <br>
 
-## **Screenshots**
-
-![Yummy Homepage](https://github.com/BoulaWilliam/Yummy-With-APIs/raw/main/assets/screenshots/home.png)
-*Explore Meals by Category*
-
-![Meal Details](https://github.com/BoulaWilliam/Yummy-With-APIs/raw/main/assets/screenshots/details.png)
-*Meal Full Details with YouTube Video*
-
-<br>
 
 ## **Author**
 
