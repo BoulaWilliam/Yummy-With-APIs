@@ -90,7 +90,7 @@ This project uses [TheMealDB API](https://www.themealdb.com/api.php) for all mea
 ## **Author**
 
 Developed by [**Boula William**](https://github.com/BoulaWilliam)
-🌐 [My Portfolio](https://boula-portfolio.vercel.app/)
+🌐 [My Portfolio](https://my-portfolio-zeta-gray-32.vercel.app/)
 
 ---
 
