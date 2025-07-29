@@ -1,6 +1,4 @@
-Here’s a polished and professional `README.md` file for your [**Yummy-With-APIs**](https://boulawilliam.github.io/Yummy-With-APIs/) project, styled similarly to your FreshCart README:
 
----
 
 # **Yummy With APIs** 🍽️
 
